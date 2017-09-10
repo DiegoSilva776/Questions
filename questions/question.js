@@ -685,7 +685,7 @@ TrueOrFalseQuestion.prototype = {
     $(questionIdSelector + this.base.SELECTOR_IMG_QUESTION_STATUS).attr('src', "");
 
     // Update the question status
-    this.getCallback()(this.getModel().unitId, this.getModel().questionId, ctx.base.QUESTION_STATUS.CLEAR);
+    this.getCallback()(this.getModel().unitId, this.getModel().questionId, this.base.QUESTION_STATUS.CLEAR);
   },
 
   ensureSelectionRightAnswer: function () {
@@ -708,13 +708,14 @@ TrueOrFalseQuestion.prototype = {
   },
 
   hideHints: function () {
+    var ctx = this;
     var questionIdSelector = this.base.getQuestionIdSelector(this.getModel().unitNumber, this.getModel().questionNumber);
     var alternativesHints = $(questionIdSelector + this.base.SELECTOR_ALTERNATIVE_HINT);
     
     try {
       $(alternativesHints).each(function () {
-        if (!$(this).hasClass(this.base.CLASS_HIDDEN)) {
-          $(this).addClass(this.base.CLASS_HIDDEN);
+        if (!$(this).hasClass(ctx.base.CLASS_HIDDEN)) {
+          $(this).addClass(ctx.base.CLASS_HIDDEN);
         }
       });
 
@@ -790,14 +791,14 @@ TrueOrFalseQuestion.prototype = {
         try {
           $(alternativesHints).each(function () {
             
-            if ($(this).hasClass(this.base.CLASS_HIDDEN) && $(this).hasClass(this.base.CLASS_SUCCESS)) {
-              $(this).removeClass(this.base.CLASS_HIDDEN);
+            if ($(this).hasClass(ctx.base.CLASS_HIDDEN) && $(this).hasClass(ctx.base.CLASS_SUCCESS)) {
+              $(this).removeClass(ctx.base.CLASS_HIDDEN);
             }
           });
     
-          $(questionIdSelector + this.base.SELECTOR_TRY_AGAIN_BTN).css("opacity", "0.5");
-          $(questionIdSelector + this.base.SELECTOR_SUBMIT_BTN).css("opacity", "0.5");
-          $(questionIdSelector + this.base.SELECTOR_IMG_QUESTION_STATUS).attr('src', this.base.QUESTION_IMAGES.ICO_PNG_SUCCESS);
+          $(questionIdSelector + ctx.base.SELECTOR_TRY_AGAIN_BTN).css("opacity", "0.5");
+          $(questionIdSelector + ctx.base.SELECTOR_SUBMIT_BTN).css("opacity", "0.5");
+          $(questionIdSelector + ctx.base.SELECTOR_IMG_QUESTION_STATUS).attr('src', ctx.base.QUESTION_IMAGES.ICO_PNG_SUCCESS);
         } catch (err) {
           console.log("Failed to reset the alternative hints");
         }
