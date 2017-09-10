@@ -17,50 +17,6 @@ var course = {
             unitQuestions: [
                 {
                     questionId: 0,
-                    type: "singleAnswer",
-                    enunciate: "Select the incorrect alternative:",
-                    rightAlternativeId: 2,
-                    questionStatusImg: "",
-                    alternatives: [
-                        {
-                            id: 0,
-                            isDisplayingTip: false,
-                            alternativeText: "Correct alternative.",
-                            alternativeHint: "This alternative is right, check the other ones",
-                            hintClass: "warning"
-                        },
-                        {
-                            id: 1,
-                            isDisplayingTip: false,
-                            alternativeText: "Correct alternative.",
-                            alternativeHint: "This alternative is right, check the other ones",
-                            hintClass: "warning"
-                        },
-                        {
-                            id: 2,
-                            isDisplayingTip: false,
-                            alternativeText: "Incorrect alternative.",
-                            alternativeHint: "Congrats!, this is the only alternative that is incorrect.",
-                            hintClass: "success"
-                        },
-                        {
-                            id: 3,
-                            isDisplayingTip: false,
-                            alternativeText: "Correct alternative.",
-                            alternativeHint: "This alternative is right, check the other ones",
-                            hintClass: "warning"
-                        },
-                        {
-                            id: 4,
-                            isDisplayingTip: false,
-                            alternativeText: "Correct alternative.",
-                            alternativeHint: "This alternative is right, check the other ones",
-                            hintClass: "warning"
-                        }
-                    ]
-                },
-                {
-                    questionId: 1,
                     type: "multipleAnswersTrueFalse",
                     questionStatusImg: "",
                     enunciate: "Select T for the alternatives that are correct or F for the alternatives that are incorrect:",
@@ -108,7 +64,7 @@ var course = {
                     ]
                 },
                 {
-                    questionId: 2,
+                    questionId: 1,
                     type: "singleAnswer",
                     enunciate: "Analyze the alternatives and pick the correct ones: ",
                     rightAlternativeId: 1,
@@ -177,6 +133,50 @@ var course = {
                             hintClass: "warning"
                         }
                     ]
+                },
+                {
+                    questionId: 2,
+                    type: "singleAnswer",
+                    enunciate: "Select the incorrect alternative:",
+                    rightAlternativeId: 2,
+                    questionStatusImg: "",
+                    alternatives: [
+                        {
+                            id: 0,
+                            isDisplayingTip: false,
+                            alternativeText: "Correct alternative.",
+                            alternativeHint: "This alternative is right, check the other ones",
+                            hintClass: "warning"
+                        },
+                        {
+                            id: 1,
+                            isDisplayingTip: false,
+                            alternativeText: "Correct alternative.",
+                            alternativeHint: "This alternative is right, check the other ones",
+                            hintClass: "warning"
+                        },
+                        {
+                            id: 2,
+                            isDisplayingTip: false,
+                            alternativeText: "Incorrect alternative.",
+                            alternativeHint: "Congrats!, this is the only alternative that is incorrect.",
+                            hintClass: "success"
+                        },
+                        {
+                            id: 3,
+                            isDisplayingTip: false,
+                            alternativeText: "Correct alternative.",
+                            alternativeHint: "This alternative is right, check the other ones",
+                            hintClass: "warning"
+                        },
+                        {
+                            id: 4,
+                            isDisplayingTip: false,
+                            alternativeText: "Correct alternative.",
+                            alternativeHint: "This alternative is right, check the other ones",
+                            hintClass: "warning"
+                        }
+                    ]
                 }
             ]
         }
@@ -195,7 +195,7 @@ function buildEvaluationForm() {
     var unit1 = course.units[0];
 
     var question1Obj = jQuery.extend({}, new TrueOrFalseQuestion());
-    var question1Model = unit1.unitQuestions[1];
+    var question1Model = unit1.unitQuestions[0];
     var modelQuestion1 = {
         btnTryAgainText: DEFAULT_LBL_BTN_TRY_AGAIN,
         btnSubmitText: DEFAULT_LBL_BTN_SUBMIT_ANSWER,
@@ -211,7 +211,7 @@ function buildEvaluationForm() {
     question1Obj.build(EVALUATION_FORM_SELECTOR, modelQuestion1, onQuestionAlternativeSelected);
 
     var question2Obj = jQuery.extend({}, new SingleAnswerQuestion());
-    var question2Model = unit1.unitQuestions[2];
+    var question2Model = unit1.unitQuestions[1];
     question2Model.staticAlternatives = Questions.addRomanAlgarismsForAlternatives(question2Model.staticAlternatives);
     var modelQuestion2 = {
         btnTryAgainText: DEFAULT_LBL_BTN_TRY_AGAIN,
@@ -231,7 +231,7 @@ function buildEvaluationForm() {
     question2Obj.build(EVALUATION_FORM_SELECTOR, modelQuestion2, onQuestionAlternativeSelected);
 
     var question3Obj = jQuery.extend({}, new SingleAnswerQuestion());
-    var question3Model = unit1.unitQuestions[0];
+    var question3Model = unit1.unitQuestions[2];
     question3Model.alternatives = Questions.getAlphabetLetterForAlternatives(question3Model.alternatives, true);
     var modelQuestion3 = {
         btnTryAgainText: DEFAULT_LBL_BTN_TRY_AGAIN,
@@ -251,7 +251,7 @@ function buildEvaluationForm() {
 }
 
 function onQuestionAlternativeSelected(unitId, questionId, questionStatus){
-    console.log("The user changed the status of a Question object: ");
+    console.log("The user has changed the status of a Question object: ");
     console.log("Unit id: " + unitId);
     console.log("Question id: " + questionId);
     console.log("Question status: " + questionStatus);

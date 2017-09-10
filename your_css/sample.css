@@ -5,7 +5,7 @@ img {
     top:0px;
     width:auto;
     height:auto;
-    max-height:350px;
+    max-width:90%;
 }
 
 ul.no-bullet-point {
@@ -21,6 +21,17 @@ ul.no-bullet-point span {
 small {
     font-size: 16px;
 }
+
+.jumbotron {
+    background-color:#111111;
+    color:#fafafa;
+}
+.orange {
+    color:orange;
+}
+.black {
+    color:#000000;
+}
 .blue {
-    color:#4285F4;
+    color:#17598c;
 }
