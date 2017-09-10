@@ -5,7 +5,7 @@ It allows the user to select an alternative, in case of a single answer question
 
 It tracks the users' choices while they're selecting each option, and once the answer has been submitted, it let's you catch it for evaluation.
 
-## Requirements
+## Dependencies
 jQuery - https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js
 
 Bootstrap - https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js
