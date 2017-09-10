@@ -1,3 +1,24 @@
+/**
+ * General
+ */
+.git-logo {
+    width:50px;
+    height:auto;
+}
+
+.repo-link {
+    display:table;
+}
+.repo-link img, 
+.repo-link a {
+    display: table-cell;
+    position: relative;
+    vertical-align: middle;
+}
+.repo-link a {
+    left:15px;
+}
+
 img {
     display: block;
     position: relative;
@@ -22,8 +43,15 @@ small {
     font-size: 16px;
 }
 
-.jumbotron {
+/**
+ * Color
+ */
+.bg-black {
     background-color:#111111;
+    color:#fafafa;
+}
+.bg-orange {
+    background-color:orange;
     color:#fafafa;
 }
 .orange {
