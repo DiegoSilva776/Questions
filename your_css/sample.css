@@ -35,3 +35,7 @@ small {
 .blue {
     color:#17598c;
 }
+
+.faded {
+    opacity:0.5;
+}
