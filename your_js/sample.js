@@ -251,6 +251,9 @@ function buildEvaluationForm() {
 }
 
 function onQuestionAlternativeSelected(unitId, questionId, questionStatus){
-    console.log("The user changed the status of the Question object: ");
-    console.log(unitId, questionId, questionStatus);
+    console.log("The user changed the status of a Question object: ");
+    console.log("Unit id: " + unitId);
+    console.log("Question id: " + questionId);
+    console.log("Question status: " + questionStatus);
+    console.log("---------------------------------------------------");
 }

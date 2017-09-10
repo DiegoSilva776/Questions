@@ -17,3 +17,10 @@ ul.no-bullet-point span {
     font-size:22px;
     font-weight: 700;
 }
+
+small {
+    font-size: 16px;
+}
+.blue {
+    color:#4285F4;
+}

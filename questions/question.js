@@ -52,14 +52,14 @@ Question.prototype = {
 
   QUESTION_STATUS: {
     WRONG: "wrong",
-    ATTENTION: "attention",
-    RIGHT: "success",
+    ANSWERING: "answering",
+    RIGHT: "right",
     CLEAR: ""
   },
 
   QUESTION_IMAGES: {
     ICO_PNG_WRONG: "questions/images/ico_wrong_answer.png",
-    ICO_PNG_ATTENTION: "questions/images/ico_attention_answer.png",
+    ICO_PNG_ANSWERING: "questions/images/ico_answering_answer.png",
     ICO_PNG_SUCCESS: "questions/images/ico_rigth_answer.png",
   },
 
@@ -329,11 +329,11 @@ SingleAnswerQuestion.prototype = {
 
     try {
       // Update the image that represents the status of the question
-      $(questionIdSelector + this.base.SELECTOR_IMG_QUESTION_STATUS).attr('src', this.base.QUESTION_IMAGES.ICO_PNG_ATTENTION);
+      $(questionIdSelector + this.base.SELECTOR_IMG_QUESTION_STATUS).attr('src', this.base.QUESTION_IMAGES.ICO_PNG_ANSWERING);
       $(questionIdSelector + this.base.SELECTOR_SUCCESFUL_ANSWER).removeClass(this.base.CLASS_HIDDEN);
 
       // Update the question status
-      this.getCallback()(this.getModel().unitId, this.getModel().questionId, this.base.QUESTION_STATUS.ATTENTION);
+      this.getCallback()(this.getModel().unitId, this.getModel().questionId, this.base.QUESTION_STATUS.ANSWERING);
 
       var firstParent = $(selectedAlternative).parent();
       var secondParent = $(selectedAlternative).parent().parent();
@@ -652,11 +652,11 @@ TrueOrFalseQuestion.prototype = {
       var questionIdSelector = this.base.getQuestionIdSelector(this.getModel().unitNumber, this.getModel().questionNumber);
 
       // Update the image that represents the status of the question
-      $(questionIdSelector + this.base.SELECTOR_IMG_QUESTION_STATUS).attr('src', this.base.QUESTION_IMAGES.ICO_PNG_ATTENTION);
+      $(questionIdSelector + this.base.SELECTOR_IMG_QUESTION_STATUS).attr('src', this.base.QUESTION_IMAGES.ICO_PNG_ANSWERING);
       $(questionIdSelector + this.base.SELECTOR_SUCCESFUL_ANSWER).removeClass(this.base.CLASS_HIDDEN);
 
       // Update the question status
-      this.getCallback()(this.getModel().unitId, this.getModel().questionId, this.base.QUESTION_STATUS.ATTENTION);
+      this.getCallback()(this.getModel().unitId, this.getModel().questionId, this.base.QUESTION_STATUS.ANSWERING);
 
       var selectedQuestion = -1;
       var selectedQuestionChoice = "";
@@ -781,7 +781,7 @@ TrueOrFalseQuestion.prototype = {
       var ctx = this;
       var questionIdSelector = this.base.getQuestionIdSelector(this.getModel().unitNumber, this.getModel().questionNumber);
       
-      if (this.getModel().questionStatusImg === this.base.QUESTION_IMAGES.ICO_PNG_ATTENTION) {
+      if (this.getModel().questionStatusImg === this.base.QUESTION_IMAGES.ICO_PNG_ANSWERING) {
         this.setUserGotItRight(true);
         this.ensureSelectionRightAnswer();
         
