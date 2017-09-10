@@ -1,0 +1,19 @@
+img {
+    display: block;
+    position: relative;
+    left: 0px;
+    top:0px;
+    width:auto;
+    height:auto;
+    max-height:350px;
+}
+
+ul.no-bullet-point {
+    list-style-type: none;
+}
+
+ul.no-bullet-point span {
+    margin-right:15px;
+    font-size:22px;
+    font-weight: 700;
+}
