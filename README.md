@@ -8,7 +8,12 @@ It tracks the users' choices while they're selecting each option, and once the a
 ## Requirements
 jQuery - https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js
 
+Bootstrap - https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.min.js
+
 Mustache - https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.min.js
+
+## License
+MIT - https://diegosilva776.github.io/Questions/questions.LICENSE
 
 ## Installation
 Access https://diegosilva776.github.io/Questions/
