@@ -7,6 +7,7 @@ It tracks the users' choices while they're selecting each option, and once the a
 
 ## Requirements
 jQuery - https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js
+
 Mustache - https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.min.js
 
 ## Installation
@@ -15,4 +16,4 @@ Mustache - https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.min
 3 - Add the container that is going to receive the question objects</p>
 4 - Create Question objects and append to the container</p>
 
-For detailed information read the source code of the sample.html file
+For detailed information read the source code of the index.html file
