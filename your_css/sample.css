@@ -1,6 +1,13 @@
 /**
  * General
  */
+.main-container .row {
+    margin-left:0px;
+    margin-right:0px;
+    padding-left:0px;
+    padding-right:0px;
+}
+
 .git-logo {
     width:50px;
     height:auto;
@@ -65,5 +72,5 @@ small {
 }
 
 .faded {
-    opacity:0.5;
+    opacity:0.75;
 }

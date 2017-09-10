@@ -196,8 +196,9 @@
 .question .body .alternative .text .alternative-hint { 
    position:relative;
    float:left;
-   height:auto;
    width:100%;
+   height:auto;
+   min-height: 90px;
 }
  
 .question .body .alternative .text .alternative-text,
