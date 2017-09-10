@@ -25,7 +25,7 @@ var course = {
                             id: 0,
                             isDisplayingTip: false,
                             isTrue: true,
-                            alternativeText: "This afirmative is True",
+                            alternativeText: "This is afirmative is True",
                             alternativeHint: "This alternative is true because of the factors x, y, z",
                             hintClass: "success"
                         },
@@ -33,7 +33,7 @@ var course = {
                             id: 1,
                             isDisplayingTip: false,
                             isTrue: false,
-                            alternativeText: "This afirmative is False",
+                            alternativeText: "This is afirmative is False",
                             alternativeHint: "This alternative is false because of the factors x, y, z",
                             hintClass: "warning"
                         },
@@ -41,7 +41,7 @@ var course = {
                             id: 2,
                             isDisplayingTip: false,
                             isTrue: true,
-                            alternativeText: "This afirmative is True",
+                            alternativeText: "This is afirmative is True",
                             alternativeHint: "This alternative is true because of the factors x, y, z",
                             hintClass: "success"
                         },
@@ -49,7 +49,7 @@ var course = {
                             id: 3,
                             isDisplayingTip: false,
                             isTrue: true,
-                            alternativeText: "This afirmative is True",
+                            alternativeText: "This is afirmative is True",
                             alternativeHint: "This alternative is true because of the factors x, y, z",
                             hintClass: "success"
                         },
@@ -57,7 +57,7 @@ var course = {
                             id: 4,
                             isDisplayingTip: false,
                             isTrue: false,
-                            alternativeText: "This afirmative is False",
+                            alternativeText: "This is afirmative is False",
                             alternativeHint: "This alternative is false because of the factors x, y, z",
                             hintClass: "warning"
                         }

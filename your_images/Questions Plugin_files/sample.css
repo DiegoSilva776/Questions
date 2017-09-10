@@ -1,0 +1,76 @@
+/**
+ * General
+ */
+.main-container .row {
+    margin-left:0px;
+    margin-right:0px;
+    padding-left:0px;
+    padding-right:0px;
+}
+
+.git-logo {
+    width:50px;
+    height:auto;
+}
+
+.repo-link {
+    display:table;
+}
+.repo-link img, 
+.repo-link a {
+    display: table-cell;
+    position: relative;
+    vertical-align: middle;
+}
+.repo-link a {
+    left:15px;
+}
+
+img {
+    display: block;
+    position: relative;
+    left: 0px;
+    top:0px;
+    width:auto;
+    height:auto;
+    max-width:90%;
+}
+
+ul.no-bullet-point {
+    list-style-type: none;
+}
+
+ul.no-bullet-point span {
+    margin-right:15px;
+    font-size:22px;
+    font-weight: 700;
+}
+
+small {
+    font-size: 16px;
+}
+
+/**
+ * Color
+ */
+.bg-black {
+    background-color:#111111;
+    color:#fafafa;
+}
+.bg-orange {
+    background-color:orange;
+    color:#fafafa;
+}
+.orange {
+    color:orange;
+}
+.black {
+    color:#000000;
+}
+.blue {
+    color:#17598c;
+}
+
+.faded {
+    opacity:0.75;
+}
